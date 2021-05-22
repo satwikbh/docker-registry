@@ -4,4 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker built -t satwikbh/* *
+  - docker pull satwikbh/python-web-app
+
+script:
+  - docker run -d -p 5000:5000 python-web-app:1.0
